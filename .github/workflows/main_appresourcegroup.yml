@@ -23,7 +23,7 @@ jobs:
           distribution: 'microsoft'
 
       - name: Build with Maven
-        run: mvn clean install -DskipTests=true
+        run: mvn clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -49,9 +49,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5737B4DBD7604B6E88BA6FF2B9ACDAE5 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_468CDD8543544AA480CFFF5D06FB2F4D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_CD07DF5C4F5E46259C8563B3AB26426F }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_00033F3D8DB148ACA71A438BE4853E91 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_2894FF60E694421C9B6CF27F130E26B6 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_DBA1F923F84944379EDC73C2C01AE992 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
